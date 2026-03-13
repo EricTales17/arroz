@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Clientes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Novo Cliente</h1>
+        <form action="/add" method="POST">
+            <input type="text" name="nome" placeholder="Nome Completo" required>
+            <input type="email" name="email" placeholder="E-mail" required>
+            <input type="text" name="telefone" placeholder="Telefone">
+            <button type="submit">Cadastrar</button>
+        </form>
+
+        <hr>
+
+        <h1>Clientes Cadastrados</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>E-8mail</th>
+                    <th>Telefone</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for cliente in clientes %}
+                <tr>
+                    <td>{{ cliente.nome }}</td>
+                    <td>{{ cliente.email }}</td>
+                    <td>{{ cliente.telefone }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
