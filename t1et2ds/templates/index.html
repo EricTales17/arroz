@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Clientes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Novo Cliente</h1>
+
+        <form method="POST" action="/">
+            <div class="form-group">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="cpf_cnpj">CPF ou CNPJ:</label>
+                <input type="text" id="cpf_cnpj" name="cpf_cnpj" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="telefone">Telefone:</label>
+                <input type="text" id="telefone" name="telefone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="redes_sociais">Redes Sociais (Opcional):</label>
+                <input type="text" id="redes_sociais" name="redes_sociais" placeholder="Ex: @seu_instagram">
+            </div>
+
+            <div class="form-group">
+                <label for="observacoes">Observações / Notas (Opcional):</label>
+                <input type="text" id="observacoes" name="observacoes">
+            </div>
+
+            <button type="submit" class="btn-cadastrar">Cadastrar Cliente</button>
+        </form>
+    </div>
+</body>
+</html>

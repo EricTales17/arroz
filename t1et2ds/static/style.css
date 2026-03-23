@@ -1,52 +1,157 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    margin: 40px;
-}
+/* Importando fontes com pegada urbana/industrial do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Teko:wght@400;600&display=swap');
 
-.container {
-    max-width: 600px;
-    margin: auto;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-input {
-    display: block;
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 10px;
+/* Reset e configuração básica */
+* {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-button {
-    background-color: #28a745;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
+body {
+    /* Fundo escuro imitando asfalto, com uma textura sutil de grade */
+    background-color: #0f0f11;
+    background-image: radial-gradient(#2a2a2a 1px, transparent 1px);
+    background-size: 20px 20px;
+    color: #e0e6ed;
+    font-family: 'Share Tech Mono', monospace; /* Fonte estilo terminal/hacker */
+    padding: 40px 20px;
+}
+
+/* O "Cartão" principal */
+.container {
+    max-width: 850px;
+    margin: 0 auto;
+    background-color: #161618;
+    padding: 40px;
+    border: 2px solid #333;
+    border-left: 6px solid #00ffcc; /* Detalhe em neon cyan */
+    box-shadow: 10px 10px 0px #000; /* Sombra sólida estilo brutalista */
+}
+
+/* Títulos */
+h1, h2 {
+    font-family: 'Teko', sans-serif;
+    text-transform: uppercase;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    color: #fff;
+    text-shadow: 3px 3px 0px #ff0055; /* Sombra neon rosa */
+    margin-bottom: 25px;
+}
+
+hr {
+    border: 0;
+    height: 2px;
+    background: #333;
+    margin: 40px 0;
+}
+
+/* Formulário */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #00ffcc;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+input[type="text"], input[type="email"] {
     width: 100%;
+    padding: 15px;
+    background-color: #0a0a0c;
+    border: 1px solid #333;
+    color: #00ffcc;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+/* Efeito ao clicar no input (foco) */
+input[type="text"]:focus, input[type="email"]:focus {
+    outline: none;
+    border-color: #ff0055;
+    box-shadow: 0 0 12px rgba(255, 0, 85, 0.4);
+}
+
+/* Botão de Salvar */
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #00ffcc;
+    color: #000;
+    border: none;
+    font-family: 'Teko', sans-serif;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 6px 6px 0px #000; /* Sombra dura */
+    margin-top: 10px;
 }
 
 button:hover {
-    background-color: #218838;
+    background-color: #00ccaa;
+    transform: translate(2px, 2px); /* Efeito de "afundar" o botão */
+    box-shadow: 4px 4px 0px #000;
 }
 
+/* Tabela */
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    background-color: #0a0a0c;
+    border: 1px solid #333;
 }
 
-th,
-td {
-    border-bottom: 1px solid #ddd;
-    padding: 10px;
+th, td {
+    padding: 15px;
     text-align: left;
+    border-bottom: 1px solid #222;
 }
 
 th {
-    background-color: #f8f9fa;
+    background-color: #1a1a1e;
+    color: #ff0055;
+    text-transform: uppercase;
+    font-family: 'Teko', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+tr:hover {
+    background-color: #1a1a1e;
+}
+
+/* Botão Excluir atualizado para a nova estética */
+.btn-excluir {
+    background-color: transparent;
+    color: #ff0055;
+    border: 1px solid #ff0055;
+    padding: 8px 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+.btn-excluir:hover {
+    background-color: #ff0055;
+    color: #000;
+    box-shadow: 0 0 15px rgba(255, 0, 85, 0.6); /* Brilho neon ao passar o mouse */
+}
+
+.empty-msg {
+    text-align: center;
+    color: #444;
+    font-style: italic;
 }
